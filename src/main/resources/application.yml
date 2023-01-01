@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        #microservice-User
+        - id: microservice-User
+          uri: http://localhost:8080/users
+          predicates:
+            - Path=/**
+
+        #microservice-CV
+        - id: microservice-CV
+          uri: http://localhost:18081/cv
+          predicates:
+            - Path=/**
+server:
+  port: 1432
