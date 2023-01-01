@@ -6,12 +6,12 @@ spring:
         - id: microservice-User
           uri: http://localhost:8080/users
           predicates:
-            - Path=/**
+            - Path=/users/**
 
         #microservice-CV
         - id: microservice-CV
           uri: http://localhost:18081/cv
           predicates:
-            - Path=/**
+            - Path=/cv/**
 server:
   port: 1432
