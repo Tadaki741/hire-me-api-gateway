@@ -4,7 +4,7 @@ spring:
       routes:
         #microservice-User
         - id: microservice-User
-          uri: http://localhost:8080/users
+          uri: http://localhost:18080/users
           predicates:
             - Path=/users/**
 
