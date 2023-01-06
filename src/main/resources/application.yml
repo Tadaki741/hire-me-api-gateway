@@ -1,6 +1,15 @@
 spring:
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+            '[/**]':
+                allowedOrigins: "*"
+                allowedMethods: "*"
+                allowedHeaders: "*"
+
       routes:
         #microservice-User
         - id: microservice-User
@@ -15,3 +24,7 @@ spring:
             - Path=/cv/**
 server:
   port: 1432
+
+logging:
+  level:
+    root: debug
