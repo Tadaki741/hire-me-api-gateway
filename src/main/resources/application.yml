@@ -13,7 +13,7 @@ spring:
       routes:
         #microservice-User
         - id: microservice-User
-          uri: http://localhost:18080/users
+          uri: http://localhost:8081/users
           predicates:
             - Path=/users/**
 
@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/cv/**
 server:
-  port: 1432
+  port: 1433
 
 logging:
   level:
